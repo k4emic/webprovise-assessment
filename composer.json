@@ -1,0 +1,29 @@
+{
+    "name": "k4emic/webprovise-assessment",
+    "type": "project",
+    "license": "MIT",
+    "description": "",
+    "autoload": {
+        "psr-4": {
+            "CompanyTree\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mads Hovvang",
+            "email": "k4emic@gmail.com"
+        }
+    ],
+    "scripts": {
+        "code:analyze": [
+            "phpcs",
+            "phpstan"
+        ],
+        "code:fix": "phpcbf"
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.9",
+        "phpstan/phpstan": "^1.10"
+    }
+}

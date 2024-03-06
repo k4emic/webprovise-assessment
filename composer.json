@@ -5,7 +5,7 @@
     "description": "",
     "autoload": {
         "psr-4": {
-            "CompanyTree\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
@@ -25,5 +25,9 @@
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.9",
         "phpstan/phpstan": "^1.10"
+    },
+    "require": {
+        "psr/http-client": "^1.0",
+        "guzzlehttp/guzzle": "^7.8"
     }
 }

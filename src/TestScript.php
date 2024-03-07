@@ -2,9 +2,12 @@
 
 namespace App;
 
+// phpcs:disable PSR1.Files.SideEffects.FoundWithSymbols
+
 use App\Company\CompanyReader;
 use App\Company\CompanyTree;
 use App\Travel\TravelReader;
+use App\Travel\TravelCalculator;
 use GuzzleHttp\Client;
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -29,12 +32,11 @@ class TestScript
 
         $report = new CompanyTravelCostReport(
             new CompanyTree($companyReader),
-            $travelReader
+            new TravelCalculator($travelReader)
         );
 
-        // Enter your code here
-        echo json_encode($report);
-        echo 'Total time: '.  (microtime(true) - $start) . PHP_EOL;
+        echo json_encode($report, JSON_PRETTY_PRINT) . PHP_EOL;
+        echo 'Total time: ' .  (microtime(true) - $start) . PHP_EOL;
     }
 }
 

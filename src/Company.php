@@ -13,6 +13,6 @@ class Company
         public string $name,
         public string $parentId,
         public iterable $children = [],
-    )
-    {}
+    ) {
+    }
 }

@@ -21,8 +21,8 @@ class CompanyReader
     public function __construct(
         protected \GuzzleHttp\ClientInterface $httpClient,
         protected string $dataUri
-    )
-    {}
+    ) {
+    }
 
     public function fetch(): PromiseInterface
     {
